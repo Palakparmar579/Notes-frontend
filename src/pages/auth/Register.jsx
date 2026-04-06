@@ -25,7 +25,7 @@ const Register = () => {
 
     setForm((prev) => ({
       ...prev,
-      [name]: value.trim(),
+      [name]: value,
     }));
 
     seterrorName("");
@@ -95,7 +95,7 @@ const Register = () => {
   
   toast.success("Registered Successfully");
     setTimeout(() => {
-        navigate("/login");
+        navigate("/login",{replace:true});
       }, 1200);
   };
 

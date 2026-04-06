@@ -19,7 +19,7 @@ const Login = () => {
 
     setForm({
       ...form,
-      [name]: value.trim(),
+      [name]: value,
     });
 
     seterrorEmail("");
@@ -61,8 +61,8 @@ const Login = () => {
 
     const user = UserData.find(
   (u) =>
-    u.email.toLowerCase().trim() ===
-    form.email.toLowerCase().trim()
+    u.email===
+    form.email
 );
     if(!user){
       return toast.error("User not found with this email")

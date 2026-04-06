@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
 const Notes = () => {
-  const email = localStorage.getItem("email") || "guest";
+  const email = localStorage.getItem("email") || [];
 
   const [noteInput, setNoteInput] = useState("");
   const [notes, setNotes] = useState([]);
