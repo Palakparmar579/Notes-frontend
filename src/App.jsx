@@ -4,7 +4,7 @@ import { BrowserRouter,Routes,Route,Navigate } from "react-router-dom";
   import { Toaster } from "react-hot-toast";
 import Register from './pages/auth/Register';
 import Notes from './pages/Notes';
-import Login from './pages/auth/login';
+import Login from './pages/auth/Login'
 //import ProtectedRoute from './pages/auth/ProtectedRoute';
 function App() {
   return (
