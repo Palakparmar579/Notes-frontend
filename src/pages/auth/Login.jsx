@@ -79,68 +79,54 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-700 p-6">
-     
-      <div className="w-full max-w-md bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-8 space-y-6">
+   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-100 via-blue-200 to-indigo-300 p-6">
+  <div className="w-full max-w-md bg-white/20 backdrop-blur-lg border border-white/40 rounded-2xl shadow-2xl p-8 space-y-6">
+    <h2 className="text-3xl font-bold text-center text-gray-900">
+      Welcome Back
+    </h2>
+    <p className="text-center text-gray-800 text-sm">
+      Login to continue your journey
+    </p>
 
-        <h2 className="text-3xl font-bold text-center text-white">
-          Welcome Back
-        </h2>
-        <p className="text-center text-gray-300 text-sm">
-          Login to continue your journey
-        </p>
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-
-          {/* Email */}
-          <div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Email"
-              onChange={handleChange}
-              className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            {errorEmail && (
-              <p className="text-red-400 text-sm mt-1">{errorEmail}</p>
-            )}
-          </div>
-
-          {/* Password */}
-          <div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter Password"
-              onChange={handleChange}
-              className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            {errorPassword && (
-              <p className="text-red-400 text-sm mt-1">{errorPassword}</p>
-            )}
-          </div>
-
-          {/* Button */}
-          <button
-            type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition duration-300 shadow-md"
-          >
-            Login
-          </button>
-        </form>
-
-        {/* Bottom Text */}
-        <p className="text-center text-gray-300 text-sm">
-          Don’t have an account?{" "}
-          <Link
-            to="/register"
-            className="text-blue-400 hover:underline font-semibold"
-          >
-            Register
-          </Link>
-        </p>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Email"
+          onChange={handleChange}
+          className="w-full p-3 rounded-lg bg-white/30 text-gray-900 placeholder-gray-600 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        {errorEmail && <p className="text-red-500 text-sm mt-1">{errorEmail}</p>}
       </div>
-    </div>
+
+      <div>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter Password"
+          onChange={handleChange}
+          className="w-full p-3 rounded-lg bg-white/30 text-gray-900 placeholder-gray-600 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        {errorPassword && <p className="text-red-500 text-sm mt-1">{errorPassword}</p>}
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:scale-105"
+      >
+        Login
+      </button>
+    </form>
+
+    <p className="text-center text-gray-700 text-sm">
+      Don’t have an account?{" "}
+      <Link to="/register" className="text-blue-600 hover:underline font-semibold">
+        Register
+      </Link>
+    </p>
+  </div>
+</div>
   );
 };
 
